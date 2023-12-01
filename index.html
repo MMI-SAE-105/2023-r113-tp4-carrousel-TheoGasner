@@ -24,16 +24,18 @@
     
         .carrousel_parent-ecrans {
             display: flex;
-            width: 500%;
+            width: 100%;
             overflow-x : scroll;
+            scroll-behavior: smooth;
             scroll-snap-type: x mandatory;
             /* aligne horizontalement les enfants */
             /* largeur du parent */
         }
     
         * .carrousel_ecran {
-            
-            /* largeur du parent pour chaque enfant */
+            width: 100%; /* Largeur du parent pour chaque enfant */
+            flex: 0 0 100%; /* Permet de garder toute la largeur du parent */
+            scroll-snap-align: start;
             /* permet de garder toute la largeur du parent */
         }
     
