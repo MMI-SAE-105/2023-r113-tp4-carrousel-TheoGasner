@@ -74,13 +74,14 @@
             right: 0;
         }
 
-        .carrouse_liste-liens {
+        .caroussel_liste-liens {
             display: flex; /* créer un conteneur felxible qui permet d'ajuster la taille des éléments */
-            justify-content: center; /* aligne les éléments enfants horizontalement */
-            margin: 0; 
-            padding: 0; 
-            list-style: none;
+            justify-content: center ;
+            margin: 0;
+            padding: 0;
+            align-items: center;
             gap: 1rem;
+            list-style: none;
         }
         
     </style>
@@ -126,11 +127,11 @@
             </div>
         </div>
         <ul class="caroussel_liste-liens">
-            <li><a href="#ecran-1" class="caroussel_lien">ecran 1</a></li>
-            <li><a href="#ecran-2" class="caroussel_lien">ecran 2</a></li>
-            <li><a href="#ecran-3" class="caroussel_lien">ecran 3</a></li>
-            <li><a href="#ecran-4" class="caroussel_lien">ecran 4</a></li>
-            <li><a href="#ecran-5" class="caroussel_lien">ecran 5</a></li>
+            <li><a href="#ecran-1" :class="{actif:hrefCourant==='#ecran-1'}" >ecran 1</a></li>
+            <li><a href="#ecran-2" :class="{actif:hrefCourant==='#ecran-2'}" >ecran 2</a></li>
+            <li><a href="#ecran-3" :class="{actif:hrefCourant==='#ecran-3'}" >ecran 3</a></li>
+            <li><a href="#ecran-4" :class="{actif:hrefCourant==='#ecran-4'}" >ecran 4</a></li>
+            <li><a href="#ecran-5" :class="{actif:hrefCourant==='#ecran-5'}" >ecran 5</a></li>
         </ul>
     </div>
 </body>
